@@ -1,0 +1,4 @@
+*.pyc
+
+/backend/static/
+/backend/media/
