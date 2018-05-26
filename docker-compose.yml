@@ -43,13 +43,10 @@ services:
             - '8080:8080'
         volumes:
             - './services/proxy/default.conf:/etc/nginx/conf.d/default.conf'
-            - './frontend/dist:/var/www/html/frontend'
-            - './backend/static:/var/www/html/backend/static'
-            - './landing:/var/www/html/landing'
+              # - './backend/static:/var/www/html/backend/static'
             - 'nglogs:/var/log/nginx'
         depends_on:
             - backend
-            - frontend
 
 volumes:
     pgdata:
